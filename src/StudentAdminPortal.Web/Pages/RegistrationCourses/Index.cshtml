@@ -1,0 +1,53 @@
+﻿@page
+@model StudentAdminPortal.Web.Pages.RegistrationCourses.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Inscripcion materias</h1>
+
+<p>
+    <a asp-page="Create">Proceso de inscripción</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Créditos materia
+            </th>
+            <th>
+                Materia
+            </th>
+            <th>
+                Documento estudiante
+            </th>
+            <th>
+                Nombre estudiante
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.RegistrationCourse)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.Credits)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Course.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.DocumentNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.Name)
+                </td>
+                <td>       
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

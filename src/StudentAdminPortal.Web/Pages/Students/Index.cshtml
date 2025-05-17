@@ -1,0 +1,48 @@
+﻿@page
+@model StudentAdminPortal.Web.Pages.Students.IndexModel
+
+@{
+    ViewData["Title"] = "Estudiante";
+}
+
+
+
+<p>
+    <a asp-page="Create">Crear nuevo estudiante</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+              Nombre
+            </th>
+            <th>
+               Número documento
+            </th>
+            <th>
+                Correo
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Student) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocumentNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Lista estudiantes</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

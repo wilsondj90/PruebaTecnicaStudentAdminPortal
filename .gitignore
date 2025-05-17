@@ -1,0 +1,76 @@
+## Build results
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+## VS Code
+.vscode/
+
+## Rider
+.idea/
+
+## OS generated files
+.DS_Store
+Thumbs.db
+
+## Logs
+*.log
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## Configuration
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+## Entity Framework Migrations (optional, keep if collaborating)
+# Migrations/
+
+## dotnet tools
+*.db-shm
+*.db-wal
+
+## SQLite database (if using local DB)
+*.sqlite
+*.sqlite3
+*.db
+
+## Backup & temp files
+*.bak
+*.tmp
+*.swp
+*~
+
+## Publish
+.publish/
+wwwroot/dist/
+wwwroot/node_modules/
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+## Resharper
+_ReSharper*/
+*.ReSharper
+*.DotSettings.user
+
+## Test results
+TestResults/
+*.trx
+*.coverage
+
+## Local secrets (dotnet user-secrets)
+**/.vs/
+**/Properties/launchSettings.json
